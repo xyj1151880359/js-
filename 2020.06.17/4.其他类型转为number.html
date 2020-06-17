@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 数据类型是可以相互转化的  显示  隐士
+        // bool 转number
+
+        // 显示转化 Number() paeseInt()  parseFloat()
+        // api 接受什么参数 api 作用是什么？
+        // 
+        var x = 0.1;
+        var y = 0.2;
+        console.log(x+y)
+        // 注意:不要测试两个浮点数 运算结果
+        console.log(x + y == 3);
+        // 不论是二进制还是其他进制 最后展示的都是10位数进制
+        console.log(0xf)
+
+        // Number():作用将其他类型的数据转化为数值型，并返回转化结果
+        // --> 参数为js数据 不传参返回0
+        var res = Number('MY')  // res 接受 Number的返回结果
+        console.log(res)  // NaN
+        console.log(Number(''))  // 0
+        console.log(Number(ture))// 1
+        console.log(Number(false))  // 0
+        console.log(Number(1.156))// 0
+        console.log(Number(null)) // 0
+        console.log(Number(undefined),'========')// 0
+        console.log(Number('123456'))// 123456
+
+        // NaN 其他数字转化数值型； 没有匹配数组；那么就是NaN
+        // 1：任何数跟NAN 算术运算都是NAN
+        // 2：任何数跟他比较都是false
+        // 3：NaN 不等于 NaN
+        // 注意：数据转化NAN后的运算状况
+
+        console.log(1-NaN)
+        console.log('aa'>NaN)  //false
+        console.log(NaN===NaN) //false
+
+
+        // 字符串转 number
+        // ''---0 非空非数字字符 ---NaN
+        // 纯数字字符 --- 数字
+        // 进制字符 --- 最总输出十进制
+
+        // bool 转 number
+        // true  1
+        // false 0
+
+        // undefined NaN
+
+        //null  0
+
+        // 数组转数组
+        // 空数组 0
+        // 非空数组 NaN
+
+        // 对象转数组 NaN
+
+
+
+
+        </script>
+
+</body>
+</html>

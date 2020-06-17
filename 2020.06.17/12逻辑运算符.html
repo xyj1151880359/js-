@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 逻辑运算符表达式：返回值一定是 boolean类型
+        // 逻辑运算符 涉及到比较大小，什么类型数据能够直接比较大小？(数字)
+
+        var res = ''==[] 
+        // res = '' == '' ---> [] --> ''
+        // res = 0 == 0  ---> '' -->0
+        // res = true
+        console.log(res) //true
+
+        // var res = ''===[] //大小相等 类型不等 false
+
+        // 字符串与字符串进行比较的时候
+        // 1：不看长度
+        // 2：第一个字符与第一个字符的编码（ASCI,UNICODE）比较；比不出来 以此类推往下看
+
+        var res = '123'>'顾'
+        // res = 1 > '顾'.charCodeAt()
+        // res = false
+        // charCodeAt 获取字符的unicode
+        console.log('顾'.charCodeAt())
+        console.log(res)
+
+        var res = []>{} // false
+        // res = '' > [Object,object] 
+        // res = 0 > NaN
+        // res = false
+
+
+        console.log(res)
+
+
+
+
+    </script>
+</body>
+</html>
