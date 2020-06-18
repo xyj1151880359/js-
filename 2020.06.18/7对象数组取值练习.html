@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var arr = [
+        //     {
+        //         name:'孤烟',
+        //         arr:[
+        //             {
+        //                 _name:'aaa'
+        //             }
+        //         ]
+        //     }
+        // ]
+        // console.log(arr[0].name)
+        // console.log(arr[0].arr[0]._name)
+
+        var arr = [1,2,3,4,5,7]
+        var a = arr[0];
+        var a1 = arr[1];
+        var a2= arr[2];
+        var a3 = arr[3];
+        var a4 = arr[4];
+        var a5 = arr[5];
+        console.log(a,a1,a2,a3,a4,a5)
+
+        /*
+        for循环 
+        var i=0; 声明变量i 并初始值为0
+        i<6 是否运行{}中代码的判断条件
+        i++ 给var 1 重新赋值
+
+        特点:
+        1:var i = 0 值会执行一次
+        2:循环体中代码执行多次
+
+
+        代码执行顺序
+         1:页面初始化 执行 表达式一 var i=0;然后执行表达式二 i<6
+           -满足条件 执行 循环体{}
+           循环体执行完毕后:执行表达式三i++ 对i 进行了从新赋值i =1然后执行表达式二i<
+           -满足执行循环体{}
+           直到不满足表达式二 跳出本次循环
+
+        */
+
+         
+           
+
+        for(var i = 0;i<6;i++){ // 在循环体中访问i变量
+            // 循环体
+            console.log(arr[i])
+
+        }
+    </script>
+</body>
+</html>
