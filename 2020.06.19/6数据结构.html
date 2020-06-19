@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 数组中放的是相同的数据类型;要么都是数组 对象或字符串
+        // 对象中存放的是不同的数据类型结构
+        // 每一个数组都是有意义的:既要让数据结构符合html结构;又要让意义相符合
+
+        // 锻炼:根据页面结构 分析你需要的数据结构
+
+        // 在js中轮播图数据存在方式
+        var swipers = [
+            'https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3574127451,3300961108&fm=26&gp=0.jpg',
+            'https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3892521478,1695688217&fm=26&gp=0.jpg',
+            'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3314189121,1022414755&fm=26&gp=0.jpg',
+            'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3314189121,1022414755&fm=26&gp=0.jpg'
+        ]
+        
+        var nav = [
+            {
+                title:'会员中心',
+                icon:'iconFont'
+            }, {
+                title:'中草专辑',
+                icon:'iconFont1'
+            }, {
+                title:'精选品牌',
+                icon:'iconFont2'
+            }, {
+                title:'领券中心',
+                icon:'iconFont3'
+            }, {
+                title:'签到',
+                icon:'iconFont4'
+            },
+
+        ];
+        var timeShop = {
+                title:'限时抢购',
+                time:'00:00',
+                dec:'每天10点开始',
+                dec: '每天10天开始',
+                productlist: [
+                   {imgsrc:'' ,price: '99元',delPrice: '100元'},
+                   {imgsrc:'' ,price: '99元',delPrice: '100元'},
+                   {imgsrc:'' ,price: '99元',delPrice: '100元'},
+                   {imgsrc:'' ,price: '99元',delPrice: '100元'},
+                   ]
+
+            }
+
+
+        var classes = [
+            {
+               a:'精选' ,
+               b:'为你推荐'
+            },{
+               a:'进口' ,
+               b:'为你推荐'
+            },{
+               a:'优惠' ,
+               b:'为你推荐'
+            },{
+               a:'新品' ,
+               b:'为你推荐'
+            }
+        ]
+
+        var content = [
+            {
+                a:'图片',
+                b:'介绍',
+                c:'价格',
+                d:'已售'
+            },{
+                a:'图片',
+                b:'介绍',
+                c:'价格',
+                d:'已售'
+            },{
+                a:'图片',
+                b:'介绍',
+                c:'价格',
+                d:'已售'
+            },{
+                a:'图片',
+                b:'介绍',
+                c:'价格',
+                d:'已售'
+            }
+        ]
+
+        var header = {
+            swiper:[
+            'https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3574127451,3300961108&fm=26&gp=0.jpg',
+            'https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3892521478,1695688217&fm=26&gp=0.jpg',
+            'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3314189121,1022414755&fm=26&gp=0.jpg',
+            'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3314189121,1022414755&fm=26&gp=0.jpg'
+            ],
+            nav :[
+            {
+                title:'会员中心',
+                icon:'iconFont'
+            }, {
+                title:'中草专辑',
+                icon:'iconFont1'
+            }, {
+                title:'精选品牌',
+                icon:'iconFont2'
+            }, {
+                title:'领券中心',
+                icon:'iconFont3'
+            }, {
+                title:'签到',
+                icon:'iconFont4'
+            },
+        ]
+        }
+
+        var main = {
+            timeShop = {
+                title:'限时抢购',
+                time:'00:00',
+                dec:'每天10点开始',
+                dec: '每天10天开始',
+                productlist: [
+                   {imgsrc:'' ,price: '99元',delPrice: '100元'},
+                   {imgsrc:'' ,price: '99元',delPrice: '100元'},
+                   {imgsrc:'' ,price: '99元',delPrice: '100元'},
+                   {imgsrc:'' ,price: '99元',delPrice: '100元'},
+                   ]
+            },
+        }
+
+
+        var product = [
+            {
+                title:'热门推荐',
+                list:{
+                    imgSrc:'',
+                    list:[
+                        {
+                            title:'热门精选',
+                            list:[
+                                {name:'dddd',imgSrc:''},
+                                {name:'dddd',imgSrc:''}
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+
+            }
+        ]
+           
+    </script>
+</body>
+</html>

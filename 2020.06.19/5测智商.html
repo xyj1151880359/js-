@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      // 1:接受用户输入的内容
+      // 2:如果用户输入内容大于4000 你的智商真高
+      //  3000-4000 智商一般 2000-3000 这人有点傻
+      //    1000以下 没救了
+      
+          var str = prompt('请测试你的智商');
+          var res = str.charCodeAt();
+          if (res>4000){
+              alert('智商好高呀')
+          }else if(3000<res && res<4000){
+              alert('智商一般')
+          }else if(2000<res && res<3000){
+              alert('快傻了')
+          }else{
+              alert('没救了')
+          }
+    </script>
+</body>
+</html>

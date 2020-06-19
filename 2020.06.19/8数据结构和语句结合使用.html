@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var arr = ['1','2','3']
+
+        var teacher = [
+            {name:'范真',dec:'淑女',age:18},
+            {name:'闫岐',dec:'淑女',age:17},
+            {name:'金溪镇',dec:'男生',age:37},
+            {name:'管涛',dec:'笑嘻嘻',age:47}
+        ]
+        
+
+        // 在终端中输出,在页面中输出
+        // for(var i = 0 ; i < teacher.length;i++){
+            // console.log('姓名     ',teacher[i].name,'描述     ',teacher[i].dec)
+            // document.write(
+            // `<h1>姓名: ${teacher[i].name}, 描述: ${teacher[i].dec}</h1>`
+            // );
+            // console.log(
+            //     `<h1>姓名: ${teacher[i].name}, 描述: ${teacher[i].dec}</h1>`
+            // )
+
+            // 页面中显示 年龄 大于等于18的老师;在终端输出还是所有老师
+            // for (var i = 0;i<teacher.length;i++){
+            //     if(teacher[i].age>=18){
+            //         document.write(
+            // `<h1>姓名: ${teacher[i].name}, 描述: ${teacher[i].dec}</h1>`
+            //         )
+            //         console.log(
+            //     `<h1>姓名: ${teacher[i].name}, 描述: ${teacher[i].dec}</h1>`
+            // )
+
+            //     }
+                
+            // }
+            // 在终端输出年龄小于18的老师
+            for (var i = 0;i<teacher.length;i++){
+                if(teacher[i].age<18){
+
+                    console.log(
+                `<h1>姓名: ${teacher[i].name}, 年龄: ${teacher[i].age}</h1>`
+            )
+
+                }
+                
+            }
+            
+
+
+
+    </script>
+</body>
+</html>
