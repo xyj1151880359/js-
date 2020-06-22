@@ -30,11 +30,21 @@
          
            
 
-        for(var i = 0;i<6;i++){ // 在循环体中访问i变量
-            // 循环体
-            console.log(arr[i])
+        // for(var i = 0;i<6;i++){ // 在循环体中访问i变量
+        //     // 循环体
+        //     console.log(arr[i])
 
-        }  
+        // }
+        var sum = 0
+for(var i=0;i<=100;i++){
+    if(i%7==0 || i%10==7 || parseInt(i/10)==7 ){
+         console.log(i)
+        sum +=i
+
+    }
+    
+}
+console.log(sum)
     </script>
 </body>
 </html>

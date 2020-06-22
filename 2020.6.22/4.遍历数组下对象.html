@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var student = [
+            {
+                name:'liuyucai',
+                age:'21'
+            }
+        ]
+        for(var i=0;i<student.length;i++){
+            for(var x in student[i]){
+            console.log(x)
+            console.log(student[i][x])
+           }
+        }
+        for(var i=0;i<student.length;i++){
+            for(var x in student[i]){
+            console.log(x + ':' + student[i][x])
+            }
+        }
+        
+        // 获取所有的刘玉才和21 name age
+    </script>
+</body>
+</html>
