@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = [
+            {name:'aaa',age:23},
+            {name:'aaa',age:13},
+            {name:'aaa',age:33},
+            {name:'aaa',age:43},
+            {name:'aaa',age:32},
+            {name:'aaa',age:25},
+            {name:'aaa',age:53},
+            {name:'aaa',age:63}
+        ]
+
+        // 网页面中展示的是age>33的数据
+
+
+        // var res =[]
+        // for(var i = 0;i<arr.length;i++){
+            //     if(arr[i].age>33){
+            //     res . push(arr[i])
+            //   }
+
+            // 方式二
+            // filter() 过滤2 
+            var res = arr . filter( function(item, index){
+                // console. log(item)
+                // console. log( index)
+
+                //   return 将满足条件的元素 添加到res中
+                      return item.age>33
+                    })
+                     console . log(res)
+
+
+    </script>
+</html>
