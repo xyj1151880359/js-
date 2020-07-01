@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = [1,2,4,4,6]
+        //res中数组内容与arr中一模一样
+
+        // ...array/object 展开运算符适用于对象和数组
+        var res = [...arr]
+        var obj = {
+            namr:'my',
+            agr:22
+        }
+        // 与obj内容一模一样
+        var clone = {}
+        for(var x in obj){
+            // clone.x  x是字符串 clone[x] x才是变量  x赋值是数字
+            clone[x] = obj[x]
+        }
+        console.log(clone)
+
+        var clone1 = {...obj}
+        console.log(clone1)
+    </script>
+</body>
+</html>
