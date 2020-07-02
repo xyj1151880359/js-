@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        var arr = [1,1,2,3,42,42,5,6,6,7,7,3,3,3]
+        var arr = [1, 1, 2, 3, 42, 42, 5, 6, 6, 7, 7, 3, 3, 3]
         // 从头用第一项与后面的每一项进行比较
-        for(var i = 0; i<arr.length;i++){
+        for (var i = 0; i < arr.length; i++) {
             console.log(arr[i])
-            for(var j = i+1;j<arr.length;j++)
-            if(arr[i]===arr[j]){
-                // 后面的项与前面的项相等 删除其中一项 注意:arr length 变小了
-                arr.splice(j,1)
-                j--  // 删除元素后 for循环回退一步:如果没有j--会漏掉数据
-            }
+            for (var j = i + 1; j < arr.length; j++)
+                if (arr[i] === arr[j]) {
+                    // 后面的项与前面的项相等 删除其中一项 注意:arr length 变小了
+                    arr.splice(j, 1)
+                    j-- // 删除元素后 for循环回退一步:如果没有j--会漏掉数据
+                }
         }
         console.log(arr)
     </script>
 </body>
+
 </html>

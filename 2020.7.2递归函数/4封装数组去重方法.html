@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var arr = [1, 2, 3, 3, 4, 4, 5, 5]
+        // var res = []
+        // for (var i = 0; i < arr.length; i++) {
+        //     if (res.indexOf(arr[i]) == -1) {
+        //         res.push(arr[i])
+        //     }
+        // }
+        // console.log(res)
+
+        // for(var i=0;i<arr.length;i++){
+        //     for(var j=i+1;j<arr.length;j++){
+        //         if(arr[i] == arr[j]){
+        //             arr.splice(j,1)
+        //             j--
+        //         }
+        //     }
+        // }
+        // console.log(arr)
+
+        function arrDuplicate(arr) {
+            // 代码规范:错误优先原则
+            // 先验证长度 再验证类型  
+            if(arguments.length>1){
+                throw new Error('argument.length can not get 1')
+            }
+            if(arguments.length==0){
+                throw new Error('argument.length can not get 1')
+            }
+            if(!Array.isArray(arr)){
+                // 抛出错误有阻止下面代码执行的作用
+                throw new Error('params must is Array')
+            }
+            // 只有正确的时候下面才会执行
+            var res = []
+            for (var i = 0; i < arr.length; i++) {
+                if (res.indexOf(arr[i]) == -1) {
+                    res.push(arr[i])
+                }
+            }
+            return res
+        }
+        var newArr = arrDuplicate([1, 2, 3, 3, 4, 4, 5, 5,'ddd'])
+        console.log(newArr)
+        var res = arrDuplicate();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1
+        // function fun() {
+        //     console.log(this.s);
+        // }
+        // var obj = {
+        //     s: '1',
+        //     f: fun
+        // }
+        // var s = '2';
+        // obj.f(); // 1  是在obj中调用的fun() this指向的是obj
+        // fun(); // 2   在window下调用的fun() this指向window
+
+        // //2
+        // var A = {
+        //     name: '于飞',
+        //     f: function () {
+        //         console.log('姓名：' + this.name);
+        //     }
+        // };
+        // var B = {
+        //     name: '周超'
+        // };
+        // B.f = A.f;
+        // B.f() // 姓名：周超  
+        // A.f() // 姓名：于飞
+        // // A.f的匿名函数赋给了B.f，在运行时this分别指向的A和B
+
+        // 3
+        // var point = {
+        //     x: 0,
+        //     y: 0,
+        //     moveTo: function (x, y) { // 1 1
+        //         var moveX = function (x) {
+        //             this.x = x;   // window.x = 1
+        //         };
+        //         var moveY = function (y) {
+        //             this.y = y;  
+        //         };
+        //         moveX(x);  // window.moveX(1)
+        //         moveY(y);  //// window.moveY(1)
+        //     }
+        // };
+        // point.moveTo(1, 1);
+        // console.log(point.x); // 0 this指向的是window
+        // console.log(point.y); // 0 this指向的是window
+
+        // 4
+        // function foo() {
+        //     console.log(this)
+        //     return function () {
+        //         console.log(this)
+        //     }
+        // }
+        // var obj = {
+        //     foo: foo(),
+        //     bar: foo
+        // }
+        // var person = {}
+        // foo() //window   return后的函数中this指的是window，所以返回结果是window
+        // foo()() // window  window
+        // foo.call(obj) // object   指定的是obj
+        // foo().call(this) // window window   这个this指向的是window
+        // obj.foo(); // object 
+        // obj.bar().bind(person)() // object object   指定取person中的元素
+
+        // 5 
+        // var a = 10;
+        // // 计时器window触发；是异步的；所以计时器里面的function函数this执行window
+        // var oTimer1 = setInterval(function () {
+        //     var a = 20;
+        //     console.log(this.a); // 10  在window中调用的this
+        //     clearInterval(oTimer1);
+        // }, 100);
+
+        // 7
+        // var a = 10;
+        // var foo = {
+        //     a: 20,
+        //     // fn 赋值undefined
+        //     fn: (function () {
+        //         console.log(this); // window  立即执行函数都是在window中执行的，this指向的是window
+        //         console.log(this.a); // 10   因为this指向的是window，所以a是10
+        //     })()
+        // }
+
+        // 8
+        // 函数触发是有优先级的 new>apply call bind>对象调用
+        // function Point(x, y) {
+        //     console.log(this); // 这里的this指的是实例的对象
+        //     this.x = x;
+        //     this.y = y;
+        //     this.moveTo = function (x, y) {
+        //         this.x = x;
+        //         this.y = y;
+        //         console.log(this.x);
+        //         console.log(this.y);
+        //     }
+        // }
+        // var p1 = new Point(0, 0);
+
+        // var p2 = {
+        //     x: 0,
+        //     y: 0
+        // }
+        // p1.moveTo(1, 1); // 1  1
+        // p1.moveTo.apply(p2, [10, 10]); //这里获取p1下的方法取p2的值为x 10，y 10
+
+        // console.log(x); // 10
+        // console.log(y); // 10
+
+        (function () {
+            eval("console.log(this)"); // Window 立即执行函数在window下执行
+        })();
+
+        function Foo() {
+            this.bar = function () {
+                eval("console.log(this)"); // foo  this指向实例对象 foo
+            }
+        }
+        var foo = new Foo();
+        foo.bar();
+    </script>
+</body>
+
+</html>
