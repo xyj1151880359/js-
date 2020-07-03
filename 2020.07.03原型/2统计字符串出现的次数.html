@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var str = 'sdahdsalfhalwwflhsl'
+        // 求第一个字符在str中出现的次数
+        // var count = 0;
+        // var one = str[0];
+        // for(var i = 0;i<str.length;i++){
+        //     if(one === str[i]){
+        //         ++count
+        //     }
+        // }
+        // console.log(count)
+
+        // 统计 对象下d e在str中出现的次数
+        var count = 0;
+        var one = { // 判断的是对象下每一个key在str中出现了几次
+            d: count,
+            s: count,
+            h: count
+        }
+        for (var x in one) {
+            // 统计对象下每一个key在str中出现的次数
+            for (var i = 0; i < str.length; i++) {
+                if (x === str[i]) {
+                    ++one[x]
+                }
+            }
+        }
+        console.log(one)
+
+        // 如何把让obj中key为str中不重复字符串
+    </script>
+</body>
+
+</html>

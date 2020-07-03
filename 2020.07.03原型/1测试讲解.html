@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 一、封装一个颠倒字符串的函数，要求随机传如一个字符串，将这个字符串颠倒
+        // var str = 'safslafjslw'
+        // var newStr = ''
+        // for(var i = str.length;i>=0;i--){
+        //     newStr+=str[i]
+        // }
+        // console.log(newStr)
+
+        // 方式一
+        // var str = 'safslafjslw'
+        // function foo(param) {
+        //     if (arguments.length > 1) {
+        //         throw new Error('parma.length can not gt 1');
+        //     }
+        //     if (typeof (param) !== 'string') {
+        //         throw new Error('dataType of param must be string')
+        //     }
+        //     var res = '';
+        //     for (var i = param.length - 1; i >= 0; i--) {
+        //         res += param[i]
+        //     }
+        //     return res
+        // }
+        // var newStr = foo(str)
+        // console.log(newStr)
+
+        // 方式二
+        // var str = 'safslafjslw'
+        // function foo(str){
+        //     return str.split('').reverse().join('');
+        // }
+        // var res = foo(str)
+        // console.log(res)
+
+
+
+        // 求一个串中字符出现最多的一个字符 并统计次数
+        // 1:用对象统计,将不重复字符变为对象中key value统计出现次数,返回key与次数
+        // --->第一步 将字符串变为对象中不重复key,并赋初始值为0 去重处理
+        // --->第二步 做key的统计值
+        // --->第三步 比较大小
+        // 2:将对象中的value值进行比较 并求最大值;同时返回对应key和value值
+        // var str = 'sfhslfhwhfohfshkshlshf';
+        // var obj = {};
+        // var flag = false; // true存在 false不存在
+        // // 第一步
+        // for (var i = 0; i < str.length; i++) {
+        //     // str[i]; // 统计str[i]出现的次数
+        //     var count = 1
+        //     // 验证obj是否存在str[i]
+        //     for (var x in obj) {
+        //         if (str[i] === x) { // obj中存在这个key
+        //             ++count
+        //             flag = true;
+        //             break
+        //         } else {
+        //             flag = false
+        //         }
+        //     }
+        //     // 去重 新增;先验证 再添加
+        //     // 当不存在才新增
+        //     if (!flag) {
+        //         obj[str[i]] = 0;
+        //     }
+        // }
+
+        // // 第二步:统计key在字符串中出现的次数
+        // for (var y in obj) {
+        //     for (var j = 0; j < str.length; j++) {
+        //         if (y === str[j]) {
+        //             ++obj[y]
+        //         }
+        //     }
+        // }
+        // console.log(obj)
+        // // 第三步
+        // var max = 0;
+        // var maxKey = '';
+        // for(var x in obj){
+        //     if(max<obj[x]){
+        //         max = obj[x]
+        //         maxKey = x
+        //     }
+        // }
+        // console.log(max,maxKey)
+
+        //     var length = 10;
+
+        //     function fn() {
+        //         console.log(this.length);
+        //         // method中argument.length = 2
+        //     }
+        //     var obj = {
+        //         length: 5,
+        //         method: function (fn) {
+        //             fn();
+        //             // fn函数是由类数组 arguments触发的;所以fn中this指向arguments
+        //             arguments[0]();
+        //         },
+        //     };
+
+        //     obj.method(fn, 1);
+
+
+        // 腾讯面试笔试题
+        // 作用 闭包
+        function fun(n, o) {
+            console.log(o);
+            return {
+                fun: function (m) {
+                    return fun(m, n);
+                }
+            };
+        }
+        // 垃圾回收机制:将没有用的变量销毁了
+        var a = fun(0); // undefined 
+        a.fun(1); // 0 //有返回值 但没有任何变量引用
+        a.fun(2); // 0
+        a.fun(3); // 0
+        var b = fun(0).fun(1).fun(2).fun(3);
+        var c = fun(0).fun(1);
+        c.fun(2); // 0
+        c.fun(3); // 0
+        //问:三行a,b,c的输出分别是什么？ 为什么
+    </script>
+</body>
+
+</html>

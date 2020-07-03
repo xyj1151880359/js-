@@ -31,16 +31,16 @@
         function arrDuplicate(arr) {
             // 代码规范:错误优先原则
             // 先验证长度 再验证类型  
-            if(arguments.length>1){
-                throw new Error('argument.length can not get 1')
-            }
-            if(arguments.length==0){
-                throw new Error('argument.length can not get 1')
-            }
-            if(!Array.isArray(arr)){
-                // 抛出错误有阻止下面代码执行的作用
-                throw new Error('params must is Array')
-            }
+            // if(arguments.length>1){
+            //     throw new Error('argument.length can not get 1')
+            // }
+            // if(arguments.length==0){
+            //     throw new Error('argument.length can not get 1')
+            // }
+            // if(!Array.isArray(arr)){
+            //     // 抛出错误有阻止下面代码执行的作用
+            //     throw new Error('params must is Array')
+            // }
             // 只有正确的时候下面才会执行
             var res = []
             for (var i = 0; i < arr.length; i++) {
