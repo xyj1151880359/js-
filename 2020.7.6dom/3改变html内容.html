@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wraper">
+        <div id="" class="box">这是一个html</div>
+        <div id="bth">点击修改</div>
+    </div>
+    <script>
+        var box = document.getElementsByTagName('box')[0]
+        var btn = document.querySelector('#btn');
+        // 点击事件，事件处理函数需要用户触发才能执行
+        bth.onclick = function () {
+            // innerHTML html 中的内容
+        }
+        console.log(box)
+        console.log(bth)
+        var wraper = document.getElementsByClassName('wraper')[0];
+
+        // 对象取值
+        console.log(wraper.innerHTML); // html字符串
+        console.log(typeof wraper.innerHTML) // string
+
+        // 给innerHTML重新赋值
+        wraper.innerHTML = 'ddddd'
+
+        // 页面中所有信息都是字符串
+        // 页面中标签可以通过dom选择器 获取dom对象
+
+        // innerHTML 与innerText区别？
+        // innerFTML 与innerText区别?
+        // innerHTML 赋值为模板字符innerText 赋值为文本内容。
+        //不论修改哪个内容; html中内容都会发生变化。推荐innerHTML
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wraper">
+        <div id="box"></div>
+    </div>
+    <script>
+        // 选择器的作用：选中html元素，然后进行js修改
+        // 用声明选择器选中结果 --->变量
+
+        // 通过html字符串 获取html元素 返回 类数组(Elements)
+        var divs = document.getElementsByTagName('div')
+        console.log(divs)
+        console.log(divs[1])
+
+        // 获取 class 为 'wraper' 的元素 返回类数组
+        var wrap = document.getElementsByClassName('wraper')
+        wrap = wrap[0]
+        console.log(wrap) // 获取元素对象
+
+        // 通过Id获取id = box 的html元素对象 返回元素对象
+        var box = document.getElementById('box');
+        console.log(box)
+
+        var box1 = document.querySelector('#box');
+        console.log(box1)
+
+        var wraps = document.querySelectorAll('.wraper');
+        console.log(wraps)
+
+        // 总结：dom的选择器 document.xxx() 参数为字符串，返回值要么是元素对象要么是元素对象结合
+        // 注意 返回集合 用到结集合取值
+    </script>
+</body>
+</html>
